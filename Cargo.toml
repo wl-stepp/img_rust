@@ -1,6 +1,6 @@
 [package]
 name = "img_rust"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Willi Stepp <willi.stepp@epfl.ch>"]
 edition = "2018"
 

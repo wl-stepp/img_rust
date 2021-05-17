@@ -12,7 +12,8 @@ fn img_rust(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     }
 
     #[pyfn(m, "screen_stack_wrap")]
-    pub fn screen_stack_py<'py>(py: Python<'py>, stack1: PyReadonlyArray4<'_, u8>, stack2: PyReadonlyArray4<'_, u8>) -> &'py PyArray4<u8>{
+    pub fn screen_stack_py<'py>(py: Python<'py>, stack1: PyReadonlyArray4<'_, u8>,
+     stack2: PyReadonlyArray4<'_, u8>) -> &'py PyArray4<u8>{
         let stack_1 = stack1.as_array();
         let stack_2 = stack2.as_array();
         screen_stack_wrap(stack_1, stack_2).into_pyarray(py)
